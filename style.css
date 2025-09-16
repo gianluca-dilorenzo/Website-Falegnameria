@@ -681,34 +681,15 @@ a {
     width: 100%;
     text-align: center;
   }
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    height: 70px;
-    width: auto;
-
-  }
-}
-
-
-@media (max-width: 768px) {
-  .icon-hamburger {
-    display: block;
-    position: absolute;
-    right: 20px;   /* sposta a destra */
-    top: 20px;     /* sposta in alto */
-    z-index: 1000;
   
+  .nav-left {
+    margin-left: 0;
+  }
+  
+  .nav-right {
+    margin-right: 0;
   }
 }
-
-@media (max-width: 768px) {
-  .cover__content {
-    margin-top: 100px;
-  }
-}
-
 
 
 /* CARD */
@@ -756,27 +737,3 @@ a {
       font-size: 0.95rem;
       color: #333;
     }
-
-
-
-
-
-
-  
-  .nav-left {
-    margin-left: 0;
-  }
-  
-  .nav-right {
-    margin-right: 0;
-  }
-
-
-/* COLORI STATISTICHE */
-.color1 {
-  color: #d4af37;
-}
-
-.color2 {
-  color: #ff6b6b;
-}
