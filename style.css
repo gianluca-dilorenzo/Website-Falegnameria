@@ -7,6 +7,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #F9EBE0;
 }
 
 *,
@@ -14,6 +15,8 @@ html {
 *:after {
   box-sizing: border-box;
 }
+
+
 
 h1,
 h2,
@@ -192,7 +195,7 @@ a {
   padding: 10px 100px;
   margin: 0px;
   padding-top: 60px;
-  min-height: 600px;
+  min-height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -203,6 +206,30 @@ a {
 
 .cover * {
   color: #fff
+}
+
+.covertall{
+  text-align: center;
+  padding: 10px 100px;
+  margin: 0px;
+  padding-top: 60px;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center center;
+  background-size: cover;
+  color: #eee;
+}
+
+.cover__content{
+  position: relative;
+  top: -30px;
+}
+
+.cover__content a{
+  font-size: 20px;
 }
 
 /* Grid System */
@@ -217,6 +244,10 @@ a {
 
 .grid--center {
   justify-content: center;
+}
+
+.grid p{
+  font-size: 17px;
 }
 
 .col {
@@ -428,6 +459,11 @@ a {
   padding: 20px;
 }
 
+.garam{
+  font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+  color: #0D2149;
+}
+
 /* NAVBAR RESPONSIVE */
 .nav-container {
   display: flex;
@@ -483,7 +519,7 @@ a {
 
 .cta {
   background-color: #555;
-  color: #d4af37;
+  color: white;
   padding: 8px 16px;
   border-radius: 2px;
   font-weight: bold;
@@ -491,8 +527,7 @@ a {
 }
 
 .cta:hover {
-  background-color: #d4af37;
-  color: #555;
+  background-color: black;
 }
 
 /* HAMBURGER ICON - NASCOSTO SU DESKTOP */
@@ -553,11 +588,11 @@ a {
 }
 
 .mobile-menu-list li a:hover {
-  color: #d4af37;
+  color: white;
 }
 
 .mobile-menu-list .cta {
-  background-color: #d4af37;
+  background-color: #fff;
   color: #000;
   border-radius: 5px;
   margin-top: 20px;
@@ -570,50 +605,51 @@ a {
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
+
   /* Mostra hamburger icon */
   .icon-hamburger {
     display: flex;
   }
-  
+
   /* Mostra menu mobile */
   .mobile-menu {
     display: block;
   }
-  
+
   /* Nascondi menu desktop */
   .nav-left,
   .nav-right {
     display: none;
   }
-  
+
   /* Menu mobile aperto */
   .menu-open .mobile-menu {
     left: 0;
   }
-  
+
   /* Previeni scroll quando menu è aperto */
   .menu-open {
     overflow: hidden;
   }
-  
+
   /* Animazione hamburger a X */
   .menu-open .icon-hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
   }
-  
+
   .menu-open .icon-hamburger span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .menu-open .icon-hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
-  
+
   /* Aggiusta logo mobile */
   .logo img {
     height: 60px;
   }
-  
+
   .nav-container {
     padding: 15px 20px;
   }
@@ -671,7 +707,7 @@ a {
     padding: 20px;
     padding-top: 120px;
   }
-  
+
   .grid {
     flex-direction: column;
     gap: 20px;
@@ -681,59 +717,70 @@ a {
     width: 100%;
     text-align: center;
   }
-  
+
   .nav-left {
     margin-left: 0;
   }
-  
+
   .nav-right {
     margin-right: 0;
   }
 }
 
 
-/* CARD */
-    .cards-container {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding-bottom: 1rem;
-      scroll-snap-type: x mandatory;
-      margin-left: 20px;
-      
-    }
 
-    .cards-container::-webkit-scrollbar {
-      display: none; /* nasconde la scrollbar */
-    }
 
-    .card {
-      flex: 0 0 300px;
-      height: 50vh;
-      background: white;
-      border-radius: 2px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      scroll-snap-align: start;
-      transition: transform 0.3s ease;
-    }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+/* Stato scrollato */
+.header.scrolled .nav-left li a,
+.header.scrolled .nav-right li a {
+  color: #463F1A;
+}
 
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+.header.scrolled .cta {
+  background-color: black;
+  color: white;
+}
 
-    .card h3 {
-      font-size: 2.2rem;
-      margin: 0 0 0.5rem;
-      color: white;
-    }
 
-    .card p {
-      font-size: 0.95rem;
-      color: #333;
-    }
+/* top-right icons - posizionate nell'angolo in alto a destra */
+.header { position: fixed; } /* già l'hai, assicurati */
+.top-right-icons {
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  z-index: 10002; /* più alto del resto */
+}
+
+/* stile icone */
+.top-right-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;              /* colore icona */
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color .18s ease, color .18s ease;
+}
+
+/* hover */
+.top-right-icons a:hover {
+  background-color: rgba(255,255,255,0.06);
+  color: #d4af37;
+}
+
+/* se vuoi nasconderle quando apri il menu mobile (assumendo che la classe .menu-open venga aggiunta al body) */
+.menu-open .top-right-icons { display: none; }
+
+/* se vuoi che diventino nere quando aggiungi .scrolled a header (come prima) */
+.header.scrolled .top-right-icons a { color: black; }
+
+
+
+

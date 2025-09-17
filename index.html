@@ -7,7 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?EB+Garamond=:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
@@ -28,14 +31,14 @@
         <li><a href="#">Chi siamo</a></li>
         <li><a href="#" class="cta">Contattaci</a></li>
       </ul>
-      
+
       <!-- HAMBURGER ICON -->
       <div class="icon-hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      
+
       <!-- MENU MOBILE UNIFICATO -->
       <div class="mobile-menu">
         <ul class="mobile-menu-list">
@@ -45,7 +48,22 @@
           <li><a href="#" class="cta">Contattaci</a></li>
         </ul>
       </div>
+
+      <!-- icone in alto a destra -->
+      <div class="top-right-icons" aria-hidden="false">
+        <a href="mailto:info@tuodominio.it" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://maps.google.com/?q=indirizzo" target="_blank" aria-label="Posizione">
+          <i class="fa-solid fa-location-dot"></i>
+        </a>
+        <a href="tel:+391234567890" aria-label="Telefono">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+
     </div>
+
   </header>
 
   <div class="cover"
@@ -59,7 +77,7 @@
       style="position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.4); z-index: 1;">
     </div>
     <div class="cover__content mt-3" style="position: relative; z-index: 2;">
-      <h1> Artigianato su misura, <br>fatto per durare.</h1>
+      <h1 class="pb-2"> Artigianato su misura, <br>fatto per durare.</h1>
       <h3 style="font-weight: 300;"><strong>Soluzioni personalizzate</strong> in legno, <br> con <strong>materiali
           selezionati</strong> e <strong>finiture di qualità</strong>. </h3>
       <a href="#" class="button mt-2">Contattaci per un preventivo</a>
@@ -85,47 +103,64 @@
   </div>
 
 
-    <div class="spacer"></div>
-
-    <h2 class="text-center p-3 mt-2 text-1 mb-2">I nostri servizi</h2>
-
-  <div class="cards-container">
-    <div class="card" style="background-image: url(https://media.istockphoto.com/id/1329159755/it/foto/tela-per-la-protezione-solare-di-fronte-al-ristorante.jpg?s=1024x1024&w=is&k=20&c=wBS26Ykm7QsdALpLVYLFRdyboQPLw31A0Dj1Qgv_-oc=); background-size: cover; background-repeat: no-repeat; background-position: center;">
-      <div class="card-icon"></div>
-      <h3>Tende da sole</h3>
-      <p>Creiamo siti web moderni e responsive, ottimizzati per ogni dispositivo.</p>
+  <div class="grid pt-4 mt-3">
+    <div class="col-50 text-center p-3">
+      <h4 style="font-weight: 600; color:rgba(96, 73, 44);">DA OLTRE 40 ANNI</h4>
+      <h2 class="garam text-1 pb-2">Tradizione, precisione, eccellenza.</h2>
+      <p>Realizziamo mobili su misura con la massima attenzione ai dettagli, <br> frutto di passione e lunga esperienza
+        artigianale.
+        Dalla scelta dei materiali alla finitura, ogni fase del processo produttivo è guidata dalla dedizione e
+        dall’amore per il legno.</p>
     </div>
-    <div class="card">
-      <div class="card-icon">🛒</div>
-      <h3>E-commerce</h3>
-      <p>Soluzioni complete per vendere online in modo semplice e sicuro.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">⚡</div>
-      <h3>SEO & Marketing</h3>
-      <p>Ottimizziamo la tua presenza online per farti trovare dai tuoi clienti.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🤝</div>
-      <h3>Consulenza</h3>
-      <p>Supporto strategico per sviluppare il tuo business digitale.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🤝</div>
-      <h3>Consulenza</h3>
-      <p>Supporto strategico per sviluppare il tuo business digitale.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🤝</div>
-      <h3>Consulenza</h3>
-      <p>Supporto strategico per sviluppare il tuo business digitale.</p>
+    <div class="col-50">
+      <div class="cover"
+        style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497219055242-93359eeed651?q=80&w=2049&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="cover__content">
+          <h2>Scopri la soluzione <br> adatta a te</h2>
+          <a href="#" class="button">I nostri servizi</a>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="spacer"></div>
 
-  <div class="spacer"></div>
-  <div class="spacer"></div>
-  <div class="spacer"></div>
+
+  <div class="grid text-center pt-4 mt-2">
+    <div class="col-100 pb-3">
+      <h4 style="font-weight: 600; color:rgba(96, 73, 44);">IL NOSTRO METODO</h4>
+      <h2 class="garam text-1 pb-2">Ogni dettaglio conta.</h2>
+      <p> Dai un'occhiata ai nostri progetti <br> e lasciati ispirare dalla qualità del nostro lavoro.</p>
+    </div>
+    <div class="col-33">
+      <div class="round mb-3 covertall"
+        style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1734273291574-5cc2b04589be?q=80&w=1243&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="cover__content">
+        
+        </div>
+      </div>
+    </div>
+    <div class="col-33">
+      <div class="round mb-3 covertall"
+        style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://plus.unsplash.com/premium_photo-1661962407725-b56c434a9dc5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="cover__content">
+          <a href="#" class="button">Scopri i nostri progetti</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-33">
+      <div class="round mb-3 covertall"
+        style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1746361747275-31c08d2c6d5e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="cover__content">
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
 
 
 
@@ -144,14 +179,14 @@
 
     const header = document.querySelector('.header');
 
-// Creiamo overlay per il gradiente elegante
-const gradientOverlay = document.createElement('div');
-gradientOverlay.style.position = 'absolute';
-gradientOverlay.style.top = '0';
-gradientOverlay.style.left = '0';
-gradientOverlay.style.width = '100%';
-gradientOverlay.style.height = '100%';
-gradientOverlay.style.background = 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.95) 75%, rgba(0,0,0,0) 100%)';
+    // Creiamo overlay per il gradiente elegante
+    const gradientOverlay = document.createElement('div');
+    gradientOverlay.style.position = 'absolute';
+    gradientOverlay.style.top = '0';
+    gradientOverlay.style.left = '0';
+    gradientOverlay.style.width = '100%';
+    gradientOverlay.style.height = '100%';
+    gradientOverlay.style.background = 'linear-gradient(to bottom, rgba(249, 235, 224,1) 0%, rgba(249, 235, 224,0.95) 75%, rgba(249, 235, 224, 0) 100%)';
 
     gradientOverlay.style.opacity = '0';
     gradientOverlay.style.pointerEvents = 'none';
@@ -173,6 +208,18 @@ gradientOverlay.style.background = 'linear-gradient(to bottom, rgba(0,0,0,1) 0%,
 
       }
     });
+
+
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".header");
+      if (window.scrollY > 50) { // puoi regolare la distanza
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+
 
 
 
