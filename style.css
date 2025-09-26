@@ -317,7 +317,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   [class*='col-'] {
     width: 100%;
   }
@@ -549,23 +549,25 @@ a {
 
 /* HAMBURGER ICON - NASCOSTO SU DESKTOP */
 .icon-hamburger {
-  display: none;
-  flex-direction: column;
+  display: none;          /* visibile solo con media query */
+  flex-direction: column; /* le linee vanno in colonna */
+  justify-content: space-between;
+  width: 30px;
+  height: 18px;           /* spazio totale per le 3 righe */
   cursor: pointer;
-  padding: 10px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 1000;
+  z-index: 2000;
+
+  position: absolute;  
+  right: 20px;         
+  top: 20px;    
 }
 
 .icon-hamburger span {
-  height: 3px;
-  width: 25px;
-  background: white;
-  margin: 3px 0;
-  transition: all 0.3s ease;
+  display: block;
+  height: 4px;
+  background-color: white;
   border-radius: 2px;
+  transition: 0.3s;
 }
 
 /* MENU MOBILE UNIFICATO */
@@ -576,7 +578,7 @@ a {
   left: -100%;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
+  background: #F9EBE0;
   backdrop-filter: blur(10px);
   z-index: 999;
   transition: left 0.3s ease;
@@ -595,7 +597,7 @@ a {
 }
 
 .mobile-menu-list li a {
-  color: white;
+  /*color: white;*/
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -621,11 +623,12 @@ a {
 }
 
 /* MOBILE STYLES */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
 
   /* Mostra hamburger icon */
   .icon-hamburger {
     display: flex;
+    
   }
 
   /* Mostra menu mobile */
@@ -639,6 +642,7 @@ a {
     display: none;
   }
 
+  
   /* Menu mobile aperto */
   .menu-open .mobile-menu {
     left: 0;
@@ -651,7 +655,7 @@ a {
 
   /* Animazione hamburger a X */
   .menu-open .icon-hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
   .menu-open .icon-hamburger span:nth-child(2) {
@@ -659,7 +663,7 @@ a {
   }
 
   .menu-open .icon-hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   /* Aggiusta logo mobile */
@@ -670,6 +674,11 @@ a {
   .nav-container {
     padding: 15px 20px;
   }
+
+  .top-right-icons{
+    display: none !important;
+  }
+
 }
 
 /* Animazioni per il contenuto della cover */
@@ -707,7 +716,7 @@ a {
 }
 
 /* RESPONSIVE TYPOGRAPHY E LAYOUT */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   h1 {
     font-size: 2.2rem;
   }
