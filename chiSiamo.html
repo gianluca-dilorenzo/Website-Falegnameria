@@ -5,12 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Falegnameria Di Lorenzo</title>
+  <title>Chi siamo | Falegnameria Di Lorenzo Eboli</title>
+  <meta name="description"
+    content="La Falegnameria Di Lorenzo a Eboli è specializzata nella realizzazione artigianale di mobili, infissi e cucine su misura. Scopri la nostra storia, esperienza e passione per il legno.">
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?EB+Garamond=:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Falegnameria Di Lorenzo" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
 
 </head>
 
@@ -90,7 +97,7 @@
 
 
   <div class="contenitore p-3 mt-4">
-      <h4 class="mt-4" style="font-weight: 600; color:rgba(96, 73, 44);">LA NOSTRA STORIA</h4>
+    <h4 class="mt-4" style="font-weight: 600; color:rgba(96, 73, 44);">LA NOSTRA STORIA</h4>
     <h2 class="garam text-1 pb-2 ">Dalla tradizione artigiana alla modernità.</h2>
     <p>La Falegnameria Di Lorenzo nasce oltre vent’anni fa grazie alla visione e alla passione di Gaetano Di Lorenzo,
       maestro artigiano con più di quarant’anni di esperienza nella lavorazione del legno. Fin dall’inizio, la
@@ -105,7 +112,9 @@
   <div class="grid pt-4 mt-2">
 
     <div class="col-50">
-      <div class="cover" style="background-image:url('img/fotoBio.jpeg');"></div>
+      <img src="img/fotoBio.jpeg"
+        alt="foto di Gaetano Di Lorenzo, titolare della falegnameria Di Lorenzo, Eboli, provincia di Salerno"
+        style="width: 100%; height: 100%;;">
     </div>
 
     <div class="col-50 text-center contenitore">
@@ -130,12 +139,11 @@
         legno in opere uniche pensate per durare nel tempo.</p>
     </div>
     <div class="col-50">
-      <div class="cover" style="background-image:url('WhatsApp\ Image\ 2025-08-27\ at\ 11.01.17.jpeg');">
-        <div class="cover__content">
+      <img src="fotoFalegnameria.jpg" alt="foto della Falegnameria Di Lorenzo, Eboli, provincia di Salerno"
+        style="width: 100%; height: 100%;;">
 
-        </div>
-      </div>
     </div>
+  </div>
   </div>
 
 
@@ -220,10 +228,11 @@
     <!-- barra inferiore -->
     <div class="footer-bottom" role="note">
       <div class="inner">
-        <div>© Copyright falegnameria Di Lorenzo, Eboli via Isaia Bonavoglia 24 - 84025, Eboli (SA) - Italy 2025, P.Iva INSERISCI</div>
-        <div> - <a href="privacy.html">Privacy Policy</a> - <a href="cookie.html">Cookie Policy</a> 
+        <div>© Copyright falegnameria Di Lorenzo, via Isaia Bonavoglia 24 - 84025, Eboli (SA) - Italy 2025, P.Iva
+          04052920651</div>
+        <div> - <a href="privacy.html">Privacy Policy</a> - <a href="cookie.html">Cookie Policy</a>
+        </div>
       </div>
-    </div>
   </footer>
 
 
@@ -292,25 +301,25 @@
 
 
 
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-  // Seleziona tutti i div che vuoi animare
-  const animElements = document.querySelectorAll('.col-50, .col-33, .col-100, .recensione, .container, .cover__content, .contenitore');
+    // Seleziona tutti i div che vuoi animare
+    const animElements = document.querySelectorAll('.col-50, .col-33, .col-100, .recensione, .container, .cover__content, .contenitore');
 
-  animElements.forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: el,
-        start: "top 80%", // quando l'elemento entra nell'80% della viewport
-      },
-      opacity: 0,
-      y: 50,           // parte leggermente sotto
-      scale: 0.95,     // effetto leggermente ridotto
-      duration: 1.6,
-      ease: "power3.out",
-      stagger: 0.2
+    animElements.forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%", // quando l'elemento entra nell'80% della viewport
+        },
+        opacity: 0,
+        y: 50,           // parte leggermente sotto
+        scale: 0.95,     // effetto leggermente ridotto
+        duration: 1.6,
+        ease: "power3.out",
+        stagger: 0.2
+      });
     });
-  });
 
 
 
